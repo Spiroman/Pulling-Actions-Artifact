@@ -16,5 +16,5 @@ jobs:
       - name: Archive Something
         uses: actions/upload-artifact@v2
         with:
-          name: artifact
+          name: chicken
           path: file.txt
