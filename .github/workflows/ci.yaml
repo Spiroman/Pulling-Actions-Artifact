@@ -18,3 +18,9 @@ jobs:
         with:
           name: chicken
           path: file.txt
+
+      - name: Check archived artifacts
+        run: |
+          curl \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/Spiroman/Pulling-Actions-Artifact/actions/runs/$GITHUB_RUN_ID/artifacts
