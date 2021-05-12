@@ -21,6 +21,7 @@ jobs:
 
       - name: Check archived artifacts
         run: |
+          let previous=$GITHUB_RUN_ID-1
           curl \
             -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/Spiroman/Pulling-Actions-Artifact/actions/runs/$GITHUB_RUN_ID/artifacts
+            https://api.github.com/repos/Spiroman/Pulling-Actions-Artifact/actions/runs/$previous/artifacts
